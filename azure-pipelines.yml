@@ -15,9 +15,11 @@ steps:
 - task: UnityActivateLicenseTask@1
   name: unityactivation
   inputs:
-    username: $(unity.username)
-    password: $(unity.password)
-    serial: $(unity.serial)
+    username: '$(unity.username)'
+    password: '$(unity.password)'
+    serial: '$(unity.serial)'
+    versionSelectionMode: 'project'
+    unityProjectPath: 'TheMostAwesomeGameEverMade/'
 
 - task: UnityGetProjectVersionTask@1
   name: unitygetprojectversion
