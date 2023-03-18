@@ -23,15 +23,6 @@ steps:
     revision: '$(unitygetprojectversion.projectVersionRevision)'
     installWindowsIL2CPPModule: true
 
-- task: UnityActivateLicenseTask@1
-  name: unityactivation
-  inputs:
-    username: '$(unity.username)'
-    password: '$(unity.password)'
-    serial: '$(unity.serial)'
-    versionSelectionMode: 'project'
-    unityProjectPath: 'TheMostAwesomeGameEverMade/'
-
 - task: UnityBuildTask@3
   inputs:
     buildTarget: standalone
