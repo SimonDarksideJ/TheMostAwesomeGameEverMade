@@ -23,6 +23,12 @@ steps:
     revision: '$(unitygetprojectversion.projectVersionRevision)'
     installWindowsIL2CPPModule: true
 
+- task: UnityCMDTask@1
+  name: UnityLogin
+  inputs:
+    unityProjectPath: 'TheMostAwesomeGameEverMade/'
+    cmdArgs: '-quit -nographics -username $(unity.username) -password $(unity.password)'
+
 - task: UnityBuildTask@3
   inputs:
     buildTarget: 'standalone'
