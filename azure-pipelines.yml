@@ -25,9 +25,11 @@ steps:
 
 - task: UnityBuildTask@3
   inputs:
-    buildTarget: standalone
-    outputPath: $(Build.BinariesDirectory)
-    outputFileName: TheMostAwesomeGameEverMade
+    buildTarget: 'standalone'
+    unityProjectPath: 'TheMostAwesomeGameEverMade/'
+    versionSelectionMode: 'project'
+    outputPath: '$(Build.BinariesDirectory)'
+    outputFileName: 'TheMostAwesomeGameEverMade'
 
 # Copy build output files to artifact staging directory.
 - task: CopyFiles@2
