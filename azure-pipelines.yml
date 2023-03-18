@@ -20,6 +20,7 @@ steps:
   inputs:
     versionSelectionMode: 'specify'
     version: '$(unitygetprojectversion.projectVersion)'
+    revision: '$(unitygetprojectversion.projectVersionRevision)'
     installWindowsIL2CPPModule: true
 
 - task: UnityActivateLicenseTask@1
