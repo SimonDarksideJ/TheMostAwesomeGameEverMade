@@ -1,4 +1,4 @@
-name: GitHub Actions
+name: GitHub Actions example using GameCI
 
 on:
   workflow_dispatch:
