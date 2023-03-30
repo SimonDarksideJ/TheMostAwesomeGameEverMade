@@ -27,14 +27,14 @@ jobs:
       - name: Run tests
         uses: game-ci/unity-test-runner@v2
         with:
-          path: TheMostAwesomeGameEverMade
+          projectPath: TheMostAwesomeGameEverMade
           githubToken: ${{ secrets.GITHUB_TOKEN }}
 
       # Build
       - name: Build project
         uses: game-ci/unity-builder@v2
         with:
-          path: TheMostAwesomeGameEverMade
+          projectPath: TheMostAwesomeGameEverMade
           targetPlatform: WebGL
 
       # Output
