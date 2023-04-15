@@ -15,14 +15,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Cache
-      - uses: actions/cache@v2
-        with:
-          path: TheMostAwesomeGameEverMade/Library
-          key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
-          restore-keys: |
-            Library-
-
       # Test
 #       - name: Run tests
 #         uses: game-ci/unity-test-runner@v2
