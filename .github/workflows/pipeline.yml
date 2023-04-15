@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     name: Build my project
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Starting
         run: echo 'Starting...'
