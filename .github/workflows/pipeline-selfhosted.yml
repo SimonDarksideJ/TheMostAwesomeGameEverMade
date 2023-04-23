@@ -18,10 +18,10 @@ jobs:
   build:
     name: Build my project
     runs-on: self-hosted
-      uses: SimonDarksideJ/TheMostAwesomeGameEverMade/.github/workflows/rununitybuild.yml@main
-      with:
-        targetPlatform: StandaloneWindows
-        projectPath: TheMostAwesomeGameEverMade
+    uses: SimonDarksideJ/TheMostAwesomeGameEverMade/.github/workflows/rununitybuild.yml@main
+    with:
+      targetPlatform: StandaloneWindows
+      projectPath: TheMostAwesomeGameEverMade
 
   Upload:
     name: Upload project
