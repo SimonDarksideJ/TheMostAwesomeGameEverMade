@@ -400,7 +400,7 @@ jobs:
               New-Item -ItemType Directory -Force -Path $projectEditorsFolderPath
             }
 
-          $buildScriptPath = Join-Path $unityProjectPath $projectEditorsFolderPath "Builder.cs"
+          $buildScriptPath = Join-Path $projectEditorsFolderPath "Builder.cs"
           Set-Content -Path $buildScriptPath -Value $buildScript
 
           $buildOutputPath = Join-Path $unityProjectPath "build" ${{ inputs.targetPlatform }}
