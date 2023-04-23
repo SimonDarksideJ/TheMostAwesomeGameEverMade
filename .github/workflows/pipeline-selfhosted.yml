@@ -17,7 +17,7 @@ jobs:
 
       # Build
       - name: Build project
-        uses: SimonDarksideJ/TheMostAwesomeGameEverMade/.github/workflows/rununitybuild.yml
+        uses: SimonDarksideJ/TheMostAwesomeGameEverMade/.github/workflows/rununitybuild.yml@main
         with:
           targetPlatform: StandaloneWindows
           projectPath: TheMostAwesomeGameEverMade
