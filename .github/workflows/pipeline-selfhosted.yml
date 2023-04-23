@@ -17,6 +17,7 @@ jobs:
 
   build:
     name: Build my project
+    needs: checkout
     uses: SimonDarksideJ/TheMostAwesomeGameEverMade/.github/workflows/rununitybuild.yml@main
     with:
       targetPlatform: StandaloneWindows
@@ -24,6 +25,7 @@ jobs:
 
   Upload:
     name: Upload project
+    needs: build
     runs-on: self-hosted
     steps:
       # Output
