@@ -1,0 +1,34 @@
+name: GitHub Actions example using scripting for self-hosting
+
+on:
+  workflow_dispatch:
+
+jobs:
+  checkout:
+    name: Checkout
+    runs-on: self-hosted
+    steps:
+      - name: Starting
+        run: echo 'Starting...'
+
+      # Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+  build:
+    name: Build my project
+    runs-on: self-hosted
+      uses: SimonDarksideJ/TheMostAwesomeGameEverMade/.github/workflows/rununitybuild.yml@main
+      with:
+        targetPlatform: StandaloneWindows
+        projectPath: TheMostAwesomeGameEverMade
+
+  Upload:
+    name: Upload project
+    runs-on: self-hosted
+    steps:
+      # Output
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Build
+          path: TheMostAwesomeGameEverMade/build
