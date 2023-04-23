@@ -394,7 +394,7 @@ jobs:
 
           $editorDirectory = "Editor"          
           $projectEditorsFolderPath = Join-Path $unityProjectPath "Assets" $editorDirectory
-
+          echo "Assets folder located at [$projectEditorsFolderPath]"
           if (-not (Test-Path -Path $projectEditorsFolderPath)) {
               echo "No Editor folder in project, creating"
               New-Item -ItemType Directory -Force -Path $projectEditorsFolderPath

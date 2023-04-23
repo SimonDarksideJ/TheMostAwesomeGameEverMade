@@ -36,7 +36,7 @@ jobs:
           projectPath: TheMostAwesomeGameEverMade
 
       # Output
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: Build
           path: TheMostAwesomeGameEverMade/build
