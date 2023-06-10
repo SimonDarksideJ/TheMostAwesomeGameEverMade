@@ -22,6 +22,7 @@ public static class Builder
             BuildReport buildReport = default;
 
             string myCustomOption1 = GetArg("myCustomOption1");
+            bool myCustomOption2 = bool.Parse(GetArg("myCustomOption2"));
 
             var options = new BuildPlayerOptions
             {
